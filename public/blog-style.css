@@ -166,3 +166,40 @@ footer {
     align-items: center;
 }
 
+.popup {
+    position: absolute; /* Allows for positioning relative to the clicked tag */
+    font-family: "futura-pt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: #e0e0e0; /* Off-white background */
+    border: 1px solid rgb(0, 0, 0); /* Grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around text */
+    z-index: 1000; /* Make sure it appears over other content */
+    margin: 5px; /* Additional space around the popup */
+    max-width: 300px; /* Fixed max width */
+    text-align: left; /* Center the text within */
+    font-size: x-small;
+    opacity: 95%;
+}
+
+
+.popup button {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem; /* Adjust as needed */
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    padding: 5px; /* Adjust as needed */
+}
+
+.copyright-footer {
+    text-align: center;
+    font-size: 12px; /* You can adjust this size as needed */
+    color: black;
+    font-family: 'Futura', sans-serif; /* Fallback to sans-serif if Futura is not available */
+    margin-top: 20px; /* Adds some space above the copyright text */
+    margin-bottom: 20px; /* Adds some space below the copyright text */
+  }

@@ -1,6 +1,6 @@
 import GhostContentAPI from '@tryghost/content-api';
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 // Initialize the Ghost API
 const api = new GhostContentAPI({
@@ -28,7 +28,46 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ post }) {
 
-    console.log(post);  // This will log the tags to the console
+    const [isPopupVisible, setPopupVisible] = useState(false);
+    const [popupContent, setPopupContent] = useState("");
+    const [popupStyle, setPopupStyle] = useState({});
+    const popupRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (popupRef.current && !popupRef.current.contains(event.target)) {
+                setPopupVisible(false);
+            }
+        }
+
+        // Attach the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Remove the event listener when the component unmounts
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [popupRef, isPopupVisible]);
+
+    const handleTagClick = (event, tag) => {
+        let content = "";
+        if (tag === "en") {
+            content = "This piece was originally written in English.";
+        } else if (tag === "v2") {
+            content = "This is the second published version of this piece.";
+        }
+        // ... other cases
+        setPopupContent(content);
+
+        const rect = event.target.getBoundingClientRect();
+        const style = {
+            top: `${rect.bottom + window.scrollY}px`,
+            left: `${rect.left + window.scrollX}px`
+        };
+        setPopupStyle(style);
+
+        // Show the popup
+        setPopupVisible(true);
+    };
 
     const imageURL = `/cover-photos/${post.slug}-cover.png`;
 
@@ -42,7 +81,7 @@ export default function Post({ post }) {
             behavior: "smooth"
         });
     };
-    
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -64,12 +103,23 @@ export default function Post({ post }) {
                 <div className="metadata-container">
                     <p className="publication-date">{new Date(post.published_at).toLocaleDateString()}</p>
                     {post.tags && post.tags.map((tag, index) => (
-                        <span key={index} className="publication-tags">{tag.name}</span>
+                        <span key={index} className="publication-tags" onClick={(event) => handleTagClick(event, tag.name)}>
+                            {tag.name}
+                        </span>
                     ))}
                 </div>
                 <div className="markdown-content" dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>
+            {isPopupVisible && (
+                <div className="popup" style={popupStyle} ref={popupRef}>
+                    <div>{popupContent}</div>
+                </div>
 
+
+            )}
+            <div className="copyright-footer">
+                &copy; 2023 New World Person
+            </div>
         </>
     );
 }
