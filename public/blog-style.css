@@ -95,7 +95,7 @@ footer {
     font-family: "kepler-std-semicondensed", serif;
     font-weight: 400;
     font-style: normal;
-    bottom: 15%;
+    bottom: 50%;
     left: 10%;
     font-size: 1.2rem;
     color: white;
@@ -106,7 +106,7 @@ footer {
     font-family: "pf-videotext", sans-serif;
     font-weight: 400;
     font-style: normal;
-    bottom: 5%;
+    bottom: 15%;
     left: 10%;
     border: 2px solid white;
     border-radius: 50px;
