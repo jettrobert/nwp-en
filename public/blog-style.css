@@ -227,3 +227,15 @@ footer {
     margin-top: 20px; /* Adds some space above the copyright text */
     margin-bottom: 20px; /* Adds some space below the copyright text */
   }
+
+  .markdown-content img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.markdown-content video {
+    width: 100vw;
+    height: auto;
+    controls: true;
+}
