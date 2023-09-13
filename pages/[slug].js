@@ -51,22 +51,40 @@ export default function Post({ post }) {
     const handleTagClick = (event, tag) => {
         let content = "";
         if (tag === "en") {
-            content = "This piece was originally written in English.";
-        } else if (tag === "v2") {
-            content = "This is the second published version of this piece.";
+            content = "This piece was originally written in English and has not undergone any machine translation.";
+        } else if (tag === "br") {
+            content = "Este texto foi traduzida para uma versão sintética do português brasileiro por um modelo de inteligência artificial.";
+        } else if (tag === "de") {
+            content = "Dieser Text wurde in eine synthetische Version des Deutschen von einem künstlichen Intelligenz-Modell übersetzt.";
+        } else if (tag === "es") {
+            content = "Este texto fue traducido a una versión sintética del español por un modelo de inteligencia artificial.";
+        } else if (tag === "fr") {
+            content = "Ce texte a été traduit en une version synthétique du français par un modèle d'intelligence artificielle.";
+        } else if (tag === "hi") {
+            content = "यह लेखन एक कृत्रिम बुद्धिमत्ता मॉडल द्वारा हिंदी के एक कृत्रिम संस्करण में अनुवादित किया गया था।";
+        } else if (tag === "id") {
+            content = "Tulisan ini diterjemahkan ke dalam versi sintetis dari Bahasa Indonesia oleh sebuah model kecerdasan buatan.";
+        } else if (tag === "jp") {
+            content = "この文章は、人工知能モデルによって日本語の合成バージョンに翻訳されました。";
+        } else if (tag === "tr") {
+            content = "Bu yazı, bir yapay zeka modeli tarafından Türkçe'nin sentetik bir versiyonuna çevrildi.";
         }
-        // ... other cases
-        setPopupContent(content);
 
-        const rect = event.target.getBoundingClientRect();
-        const style = {
-            top: `${rect.bottom + window.scrollY}px`,
-            left: `${rect.left + window.scrollX}px`
-        };
-        setPopupStyle(style);
+        if (content) {
+            setPopupContent(content);
 
-        // Show the popup
-        setPopupVisible(true);
+            const rect = event.target.getBoundingClientRect();
+            const style = {
+                top: `${rect.bottom + window.scrollY}px`,
+                left: `${rect.left + window.scrollX}px`
+            };
+            setPopupStyle(style);
+
+            // Show the popup
+            setPopupVisible(true);
+        } else {
+            setPopupVisible(false);
+        }
     };
 
     const imageURL = `/cover-photos/${post.slug}-cover.png`;
@@ -106,13 +124,15 @@ export default function Post({ post }) {
                         <span key={index} className="publication-tags" onClick={(event) => handleTagClick(event, tag.name)}>
                             {tag.name}
                         </span>
+
                     ))}
+                    <p className="read-time">{post.reading_time} min read</p>  {/* The new read-time tag */}
                 </div>
                 <div className="markdown-content" dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>
             {isPopupVisible && (
                 <div className="popup" style={popupStyle} ref={popupRef}>
-                    <div>{popupContent}</div>
+                    <div>{popupContent && <span>ℹ️  {popupContent}</span>}</div>
                 </div>
 
 

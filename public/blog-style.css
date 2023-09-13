@@ -106,7 +106,8 @@ footer {
     font-family: "pf-videotext", sans-serif;
     font-weight: 400;
     font-style: normal;
-    bottom: 15%;
+    font-size: large;
+    bottom: 20%;
     left: 10%;
     border: 2px solid white;
     border-radius: 50px;
@@ -130,7 +131,7 @@ footer {
 
 .publication-date {
     display: inline-flex;
-    background: #ED1C24;
+    background: #ff0008;
     color: white;
     opacity: 0.8;
     width: auto;
@@ -142,11 +143,14 @@ footer {
     font-size: small;
     margin-right: 10px;
     padding: 0 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .publication-tags {
     display: inline-flex;
-    background: #2E3192;
+    background: #0652DD;
+    border-color: #000000;
+    border-width: 2px;
     color: white;
     opacity: 0.8;
     width: auto;
@@ -159,7 +163,27 @@ footer {
     margin-right: 10px;
     padding: 0 12px;
     text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+.read-time {
+    display: inline-flex;
+    background: rgb(0, 0, 0);
+    color: white;
+    border-width: 2px;
+    width: auto;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+    margin-right: 10px;
+    padding: 0 12px;
+    border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 
 .metadata-container {
     display: flex;
@@ -173,7 +197,7 @@ footer {
     font-style: normal;
     color: black;
     background-color: #e0e0e0; /* Off-white background */
-    border: 1px solid rgb(0, 0, 0); /* Grey border */
+    border: 1px solid rgb(79, 79, 79); /* Grey border */
     border-radius: 5px; /* Rounded corners */
     padding: 10px; /* Padding around text */
     z-index: 1000; /* Make sure it appears over other content */
