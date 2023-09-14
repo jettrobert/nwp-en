@@ -100,6 +100,17 @@ export default function Post({ post }) {
         });
     };
 
+    useEffect(() => {
+        const contentElement = document.querySelector(".markdown-content");
+        if (contentElement) {
+          contentElement.querySelectorAll("video").forEach(videoElement => {
+            videoElement.setAttribute("controls", "true");
+            videoElement.style.width = "100%";
+            videoElement.style.height = "auto";
+          });
+        }
+      }, []);
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -119,14 +130,14 @@ export default function Post({ post }) {
             </div>
             <div className="text-section" ref={textRef}>
                 <div className="metadata-container">
-                    <p className="publication-date">{new Date(post.published_at).toLocaleDateString()}</p>
+                    <div className="publication-date">{new Date(post.published_at).toLocaleDateString()}</div>
                     {post.tags && post.tags.map((tag, index) => (
                         <span key={index} className="publication-tags" onClick={(event) => handleTagClick(event, tag.name)}>
                             {tag.name}
                         </span>
 
                     ))}
-                    <p className="read-time">{post.reading_time} min read</p>  {/* The new read-time tag */}
+                    <div className="read-time">{post.reading_time} min read</div>  {/* The new read-time tag */}
                 </div>
                 <div className="markdown-content" dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>

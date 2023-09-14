@@ -1,5 +1,5 @@
 body {
-    background-color: #fffef6;
+    background-color: #1f1f1f;
     color: rgb(0, 0, 0);
     font-family: "pf-videotext", sans-serif;
     font-weight: 400;
@@ -84,21 +84,20 @@ footer {
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: 5rem;
+    font-size: 7rem;
     color: white;
-    line-height: 75px;
+    line-height: 90px;
 }
 
 .cover-excerpt {
     position: absolute;
-    position: absolute;
-    font-family: "kepler-std-semicondensed", serif;
+    font-family: "europa", sans-serif;
+    color: #ffffff;
     font-weight: 400;
     font-style: normal;
+    font-size: 25px;
     bottom: 50%;
     left: 10%;
-    font-size: 1.2rem;
-    color: white;
 }
 
 .read-more-button {
@@ -118,22 +117,21 @@ footer {
     text-transform: uppercase;
 }
 
-.text-section {
-    font-family: "ff-tisa-web-pro", serif;
-    color: #553535;
+.text-section p {
+    font-family: "europa", sans-serif;
+    color: #ffffff;
     font-weight: 400;
     font-style: normal;
-    font-size: large;
+    font-size: 20px;
     margin: 40px;
     margin-top: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .publication-date {
     display: inline-flex;
     background: #ff0008;
     color: white;
-    opacity: 0.8;
     width: auto;
     margin-bottom: 15px;
     border-radius: 50px;
@@ -142,8 +140,8 @@ footer {
     font-style: normal;
     font-size: small;
     margin-right: 10px;
-    padding: 0 12px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 7px 12px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .publication-tags {
@@ -152,7 +150,6 @@ footer {
     border-color: #000000;
     border-width: 2px;
     color: white;
-    opacity: 0.8;
     width: auto;
     margin-bottom: 15px;
     border-radius: 50px;
@@ -161,15 +158,15 @@ footer {
     font-style: normal;
     font-size: small;
     margin-right: 10px;
-    padding: 0 12px;
+    padding: 7px 12px;
     text-transform: uppercase;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .read-time {
     display: inline-flex;
-    background: rgb(0, 0, 0);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-width: 2px;
     width: auto;
     margin-bottom: 15px;
@@ -179,20 +176,22 @@ footer {
     font-style: normal;
     font-size: small;
     margin-right: 10px;
-    padding: 0 12px;
+    padding: 7px 12px;
     border-color: black;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
 .metadata-container {
+    margin-left: 40px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
 }
 
 .popup {
     position: absolute; /* Allows for positioning relative to the clicked tag */
-    font-family: "futura-pt", sans-serif;
+    font-family: "arial", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: black;
@@ -237,5 +236,8 @@ footer {
 .markdown-content video {
     width: 100vw;
     height: auto;
-    controls: true;
+}
+
+.markdown-content .kg-video-player-container, .kg-video-overlay {
+    display: none;
 }
