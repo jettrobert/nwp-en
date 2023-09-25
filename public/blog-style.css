@@ -84,7 +84,7 @@ footer {
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: 7rem;
+    font-size: 6rem;
     color: white;
     line-height: 90px;
 }
@@ -95,9 +95,36 @@ footer {
     color: #ffffff;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
-    bottom: 50%;
+    font-size: 20px;
+    margin-right: 30px;
+    bottom: 30%;
     left: 10%;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;  /* Ensures the container is 10 pixels below the title */
+    background-color: rgb(0, 0, 0);  /* Surrounds the container with a white box */
+    border-radius: 20px;  /* Rounds the corners with a radius of 20 pixels */
+    padding: 5px 15px 5px 5px;  /* Adds some padding inside the white box */
+    position: absolute;  /* Makes the container positioned relative to its closest positioned ancestor */
+    top: calc(45% + 10px);  /* 10% from the top edge plus 10 pixels to place it just below the title */
+    left: 10%;  /* Aligns with the left edge of the title */
+    font-size: medium;
+}
+
+.author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;  /* Makes the image circular */
+    margin-right: 8px;
+}
+
+.author-name {
+    font-size: 14px;
+    color: #ffffff;
+    padding-bottom: 3px;
 }
 
 .read-more-button {
@@ -122,7 +149,7 @@ footer {
     color: #ffffff;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
     margin: 40px;
     margin-top: 20px;
     line-height: 30px;
@@ -134,7 +161,7 @@ footer {
     color: white;
     width: auto;
     margin-bottom: 15px;
-    border-radius: 50px;
+    border-radius: 10px;
     font-family: "pf-videotext", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -152,7 +179,7 @@ footer {
     color: white;
     width: auto;
     margin-bottom: 15px;
-    border-radius: 50px;
+    border-radius: 10px;
     font-family: "pf-videotext", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -191,7 +218,7 @@ footer {
 
 .popup {
     position: absolute; /* Allows for positioning relative to the clicked tag */
-    font-family: "arial", sans-serif;
+    font-family: "europa", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: black;
@@ -203,7 +230,7 @@ footer {
     margin: 5px; /* Additional space around the popup */
     max-width: 300px; /* Fixed max width */
     text-align: left; /* Center the text within */
-    font-size: x-small;
+    font-size: 16px;
     opacity: 95%;
 }
 
@@ -221,7 +248,7 @@ footer {
 .copyright-footer {
     text-align: center;
     font-size: 12px; /* You can adjust this size as needed */
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Futura', sans-serif; /* Fallback to sans-serif if Futura is not available */
     margin-top: 20px; /* Adds some space above the copyright text */
     margin-bottom: 20px; /* Adds some space below the copyright text */
