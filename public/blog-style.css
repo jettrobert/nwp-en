@@ -84,9 +84,9 @@ footer {
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: 6rem;
+    font-size: 4rem;
     color: white;
-    line-height: 90px;
+    line-height: 60px;
 }
 
 .cover-excerpt {
