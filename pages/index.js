@@ -106,7 +106,7 @@ const MyBlog = ({ posts }) => {
       </div>
       <div className="scrolling-text-container">
         <div className="scrolling-text">
-          THIS IS A TEST OF THE NEW WORLD PERSON CONTENT SERVICE. THIS IS ONLY A TEST.
+          WELCOME TO THE NEW WORLD CONTENT SYSTEM. THE FUTURE IS OURS. FOLLOW US ON INSTAGRAM TO STAY UPDATED.  
         </div>
       </div>
       <div className="container" ref={containerRef}>

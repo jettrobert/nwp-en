@@ -58,6 +58,7 @@ html {
   transform: scale(0.7);
   /* Initialize the boxes to 70% scale */
   opacity: 0.6;
+  margin-bottom: 50px;
   /* Initial opacity */
 }
 
@@ -81,7 +82,7 @@ html {
     opacity: 0.6;
     /* Initial opacity */
     align-items: center;
-    margin-top: -50px;
+    margin-bottom: 50px;
   }
 }
 
