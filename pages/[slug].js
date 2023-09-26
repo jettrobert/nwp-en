@@ -21,8 +21,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const post = await api.posts.read({ slug: params.slug }, { include: 'authors,tags' });
 
-    console.log("Received post data:", post);
-
     return {
         props: { post },
     };

@@ -121,6 +121,21 @@ const MyBlog = ({ posts }) => {
         ))}
         <div className="box-spacer" />
       </div>
+
+      <div id="links-container">
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+        </a>
+        <span className="divider"> | </span>
+        <a href="https://www.newworldperson.com" target="_blank" rel="noopener noreferrer">
+          READ IN OTHER LANGUAGES
+        </a>
+        <span className="divider">|</span>
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          CONTACT US
+        </a>
+      </div>
+
       <img id="bottom-logo" src="/logo-white.svg" alt="New World Person" />
     </>
   );

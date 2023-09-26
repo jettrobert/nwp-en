@@ -67,9 +67,8 @@ html {
   .box {
     flex: 0 0 auto;
     scroll-snap-align: center;
-    height: 60vh;
-    width: 60vh;
-    bottom: 82px;
+    height: 50vh;
+    width: 50vh;
     /* Adjust this as needed */
     border-radius: 5px;
     overflow: hidden;
@@ -153,7 +152,7 @@ html {
 
 @keyframes scrollText {
   0% {
-    transform: translateX(0%);
+    transform: translateX(10%);
   }
 
   100% {
@@ -184,4 +183,59 @@ html {
   font-size: 8px;
   text-align: center;
   justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+  #links-container {
+    position: fixed;
+    /* or 'absolute', based on your requirement */
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+    width: auto;
+    /* or another appropriate value */
+    margin-top: -110px;
+  }
+}
+
+#links-container {
+  position: fixed;
+  /* or 'absolute', based on your requirement */
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering */
+  width: 315px;
+  /* or another appropriate value */
+  margin-top: -110px;
+}
+
+#links-container a {
+  color: #FFFFFF;
+  /* Text color */
+  font-size: 12px;
+  /* Text size */
+  text-decoration: underline;
+  /* Remove underline */
+}
+
+#links-container .divider {
+  color: #FFFFFF;
+  /* Text color */
+  font-size: 12px;
+  /* Text size */
+  margin-left: 3px;
+  margin-right: 3px;
+  text-decoration: none;
+  /* Remove underline */
 }
