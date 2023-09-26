@@ -81,7 +81,7 @@ html {
     opacity: 0.6;
     /* Initial opacity */
     align-items: center;
-
+    margin-top: -50px;
   }
 }
 
