@@ -90,7 +90,7 @@ html {
 .box-spacer {
   flex: 0 0 auto;
   /* Prevent shrinking */
-  width: calc((100vw - 75%) / 2) !important;
+  width: calc((100vw - 50%) / 2) !important;
 }
 
 @media (min-width: 768px) {
