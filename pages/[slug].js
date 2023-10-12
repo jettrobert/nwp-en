@@ -10,7 +10,7 @@ const api = new GhostContentAPI({
 });
 
 export async function getStaticPaths() {
-    const posts = await api.posts.browse();
+    const posts = await api.posts.browse({limit: 'all'});
 
     return {
         paths: posts.map((post) => ({ params: { slug: post.slug } })),
