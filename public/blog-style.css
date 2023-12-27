@@ -255,6 +255,13 @@ footer {
     }
   }
 
+  .metadata-container {
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
 
 .popup {
     position: absolute; /* Allows for positioning relative to the clicked tag */
